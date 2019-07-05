@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="x-admin-sm" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>快递点信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/xadmin.css">
+    <script src="./lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <blockquote class="layui-elem-quote">欢迎用户：
+                        <span class="x-red" th:text="${username}">username</span>！
+                        今天是：<span th:text="${#dates.format(new java.util.Date().getTime(), 'yyyy-MM-dd')}">time</span>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">快件信息统计</div>
+                <div class="layui-card-body ">
+                    <div>截至目前为止，本服务器提供以下数据：</div>
+                    <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a href="javascript:;" class="x-admin-backlog-body">
+                                <h3>自取机</h3>
+                                <p>
+                                    <cite>1</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a onclick="parent.xadmin.add_tab('短信发送','/show_send_goods_list')"
+                               class="x-admin-backlog-body">
+                                <h3>未发送短信数</h3>
+                                <p>
+                                    <cite th:text="${no_send_number}">number</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a onclick="parent.xadmin.add_tab('手动收货','/show_pickUp_list')" class="x-admin-backlog-body">
+                                <h3>未完成收货数</h3>
+                                <p>
+                                    <cite th:text="${no_done_number}">number</cite></p>
+                            </a>
+                        </li>
+                        <li class="layui-col-md2 layui-col-xs6">
+                            <a onclick="parent.xadmin.add_tab('全部查询','/show_goods_list')"
+                               class="x-admin-backlog-body">
+                                <h3>总条目数</h3>
+                                <p>
+                                    <cite th:text="${all_number}">number</cite></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">系统信息</div>
+                <div class="layui-card-body ">
+                    <table class="layui-table">
+                        <tbody>
+                        <tr>
+                            <th>管理端版本</th>
+                            <td>0.0.1-SNAPSHOT</td>
+                        </tr>
+                        <tr>
+                            <th>服务器地址</th>
+                            <td>127.0.0.1</td>
+                        </tr>
+                        <tr>
+                            <th>操作系统</th>
+                            <td>Windows OS</td>
+                        </tr>
+                        <tr>
+                            <th>MySQL版本</th>
+                            <td>5.7.25</td>
+                        </tr>
+                        <tr>
+                            <th>数据库引擎</th>
+                            <td>InnoDB</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <style id="welcome_style"></style>
+        <div class="layui-col-md12">
+            <blockquote class="layui-elem-quote layui-quote-nm">本系统由x-admin，LayUi，SpringBoot，Mybatis-plus进行底层驱动。</blockquote>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
