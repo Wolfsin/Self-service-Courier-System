@@ -24,7 +24,7 @@ Web 端使用 SpringBoot 进行开发，JDK 版本为 8，项目使用 Maven 进
 数据库推荐 MySQL 5.7 版本，Sql 文件在 DB 文件夹下。
 4. 修改数据库的配置文件：
 Web 端配置文件在 `src/main/resources/application.properties `文件中；树莓派端配置文件在` Connect.py` 文件中。
-！！为了保证数据统一，请确保 Web 和树莓派链接的数据库为同一个。
+    为了保证数据统一，请确保 Web 和树莓派链接的数据库为同一个！！
 5. 运行代码
 
 
@@ -47,7 +47,7 @@ The database recommends MySQL version 5.7, and the Sql file is in the DB folder.
 The web side configuration file is in the ：
  `src/main/resources/application.properties` 
  the raspberry configuration file is in the ：
- `Connect.py`
-！！To ensure data consistency, make sure that the web and the Raspberry Pi link database are the same.
+ `Connect.py`.
+    To ensure data consistency, make sure that the web and the Raspberry Pi link database are the same!!
 5. Run Code
 
