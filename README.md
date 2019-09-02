@@ -1,7 +1,13 @@
 # Self-service-Courier-System
 A courier barcode recognition and entry system using Raspberry Pi as a terminal, including a simple admin Web.   -- 一个使用树莓派作为终端机的快递条码识别、录入系统，附带 一个简易Web后台。
 
-@toc
+- [Self-service-Courier-System](#self-service-courier-system)
+    + [前言](#前言)
+  * [快速开始](#快速开始)
+- [English Version](#english-version)
+    + [Before the start](#before-the-start)
+  * [Quick start](#quick-start)
+
 
 ### 前言
 这是我大学毕业时完成的一个毕业设计，是从学校现实出发的一个小项目，运用了很多开源的库、参考了很多前辈写的代码，说来惭愧，这个项目我所作的可能就只是整合了现有的东西。下面我将来详细说明怎么使用这个项目。
